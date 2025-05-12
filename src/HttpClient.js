@@ -64,7 +64,9 @@ export default class HttpClient {
         if(request instanceof Error) {
             return new Response(request.message, { status: 424 });
         }
+        data.requestTime = Date.now();
         const response = await fetch(request);
+        data.responseTime = Date.now();
         data.response = response;
         return await executeResponseInterceptors(data, this.#responseInterceptors);
     }

@@ -66,6 +66,8 @@ export async function executeRequestInterceptors(data, interceptors) {
  * @param {Object} data - The data object containing the response
  * @param {Request} data.request - The Request object used in the original request if not modified by other response interceptors
  * @param {Response} data.response - The Response object to be processed
+ * @param {number} data.requestTime - The timestamp of the original request
+ * @param {number} data.responseTime - The timestamp of the processed response
  * @param {Map} data.store - A Map object for storing data between interceptors in one request chain execution
  * @param {Function[]} interceptors - Array of response interceptor functions
  * @returns {Promise<Response>} The processed response
