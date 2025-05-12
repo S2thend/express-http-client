@@ -1,6 +1,29 @@
 import { executeRequestInterceptors, executeResponseInterceptors } from './Core';
 
-// url, options, responseInterceptors=[], requestInterceptors=[]
+/**
+ * Makes an HTTP request with support for request and response interceptors
+ * 
+ * @async
+ * @function request
+ * @param {string} url - The URL to send the request to
+ * @param {RequestInit|Function|Array} [options] - Fetch API options, a request interceptor function, or an array of request interceptors
+ * @param {Function|Array} [responseInterceptors] - A response interceptor function or an array of response interceptors
+ * @param {Array} [requestInterceptors] - An array of request interceptors (only used when all 4 args are provided)
+ * @returns {Promise<Response>} The response after being processed by any response interceptors
+ * 
+ * @description
+ * This function is flexible and can be called with different parameter combinations:
+ * - request(url): Simple GET request
+ * - request(url, options): Request with fetch options
+ * - request(url, requestInterceptor): Request with a single request interceptor
+ * - request(url, requestInterceptors[]): Request with multiple request interceptors
+ * - request(url, options, responseInterceptor): Request with options and a response interceptor
+ * - request(url, options, responseInterceptors[]): Request with options and multiple response interceptors
+ * - request(url, requestInterceptor, responseInterceptor): Request with both interceptor types
+ * - request(url, options, responseInterceptors, requestInterceptors): Full specification
+ * 
+ * @throws {Error} When URL is missing or too many arguments are provided
+ */
 export default async function request(...args) {
     let url = '';
     let options = {};

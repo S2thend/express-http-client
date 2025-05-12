@@ -14,7 +14,8 @@
   "scripts": {
     "test": "node test",
     "build": "rollup -c",
-    "build:dev": "rollup -c --watch"
+    "build:dev": "rollup -c --watch",
+    "generate-types": "tsc --project tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.40.2",
-    "rollup-plugin-gzip": "^4.0.1"
+    "rollup-plugin-gzip": "^4.0.1",
+    "typescript": "^5.8.3"
   }
 }
