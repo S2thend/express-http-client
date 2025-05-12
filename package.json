@@ -1,6 +1,6 @@
 {
   "name": "express-http-client",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "middleware style interceptor; fetch based 0 dependancy imperative light weight http handler.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -29,7 +29,28 @@
     "url": "git+https://github.com/S2thend/express-http-client.git"
   },
   "keywords": [
-    "http"
+    "http",
+    "http-client",
+    "fetch",
+    "request",
+    "interceptor",
+    "middleware",
+    "xhr",
+    "ajax",
+    "api-client",
+    "rest-client",
+    "promise",
+    "async",
+    "axios-alternative",
+    "fetch-wrapper",
+    "request-handler",
+    "response-handler",
+    "http-pipeline",
+    "composable",
+    "extensible",
+    "lightweight",
+    "modular",
+    "chainable"
   ],
   "author": "borui cai",
   "license": "MIT",
