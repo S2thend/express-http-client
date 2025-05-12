@@ -1,5 +1,5 @@
 import HttpClientFactory from './src/HttpClientFactory';
-import request from './src/Request';
+import requestFunction from './src/Request';
 
 function createHttpClientFactory() {
     return new HttpClientFactory();
@@ -7,4 +7,4 @@ function createHttpClientFactory() {
 
 export const httpClient = createHttpClientFactory();
 
-export const request = request;
+export const request = requestFunction;
