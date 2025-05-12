@@ -4,9 +4,16 @@
   "description": "middleware style interceptor; fetch based 0 dependancy imperative light weight http handler.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    "import": "./dist/index.esm.js",
-    "require": "./dist/index.cjs.js"
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.esm.js"
+    },
+    "require": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.cjs.js"
+    }
   },
   "files": [
     "dist"
