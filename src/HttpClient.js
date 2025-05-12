@@ -48,15 +48,17 @@ export default class HttpClient {
      * @description
      * This method:
      * 1. Creates a Request object combining baseUrl and the provided url
-     * 2. Processes the request through any request interceptors
-     * 3. If request processing fails, returns a 424 (Failed Dependency) response
-     * 4. Executes the fetch operation with the processed request
-     * 5. Processes the response through any response interceptors
-     * 6. Returns the final response
+     * 2. Initializes a shared Map store for data persistence between interceptors
+     * 3. Processes the request through any request interceptors
+     * 4. If request processing fails, returns a 424 (Failed Dependency) response
+     * 5. Executes the fetch operation with the processed request
+     * 6. Processes the response through any response interceptors
+     * 7. Returns the final response
      */
     async send(url, options) {
         let data = {
             request: new Request(this.#baseUrl + url, options),
+            store: new Map()
         }
         const request = await executeRequestInterceptors(data, this.#requestInterceptors);
         if(request instanceof Error) {

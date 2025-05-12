@@ -2,8 +2,9 @@
  * Executes a chain of request interceptors sequentially
  * 
  * @async
- * @param {Object} data - The data object containing the request
+ * @param {Object} data - The data object containing the request and a store
  * @param {Request} data.request - The Request object to be processed
+ * @param {Map} data.store - A Map object for storing data between interceptors
  * @param {Function[]} interceptors - Array of request interceptor functions
  * @returns {Promise<Request|Error>} The processed request or an Error if interceptor chain fails
  * 
@@ -63,7 +64,9 @@ export async function executeRequestInterceptors(data, interceptors) {
  * 
  * @async
  * @param {Object} data - The data object containing the response
+ * @param {Request} data.request - The Request object used in the original request if not modified by other response interceptors
  * @param {Response} data.response - The Response object to be processed
+ * @param {Map} data.store - A Map object for storing data between interceptors in one request chain execution
  * @param {Function[]} interceptors - Array of response interceptor functions
  * @returns {Promise<Response>} The processed response
  * 
