@@ -77,7 +77,12 @@ export default async function request(...args) {
     if(request instanceof Error) {
         return new Response(request.message, { status: 424 });
     }
-    const response = await fetch(request);
+    let response;
+    try {
+        response = await fetch(request);
+    } catch (error) {
+        response = new Response(error, { status: 424 });
+    }
     data.response = response;
     return await executeResponseInterceptors(data, responseInterceptors);
 }
