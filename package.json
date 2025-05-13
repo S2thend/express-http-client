@@ -1,6 +1,6 @@
 {
   "name": "express-http-client",
-  "version": "0.3.2",
+  "version": "0.3.5",
   "description": "middleware style interceptor; fetch based 0 dependancy imperative light weight http handler.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
