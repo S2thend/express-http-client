@@ -7,7 +7,7 @@ function createHttpClientFactory() {
     return new HttpClientFactory();
 }
 
-export const httpClient = createHttpClientFactory();
+export const httpClient = createHttpClientFactory;
 
 export const request = requestFunction;
 
