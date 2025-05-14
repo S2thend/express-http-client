@@ -1,0 +1,68 @@
+{
+  "name": "express-http-client",
+  "version": "0.3.6",
+  "description": "middleware style interceptor; fetch based 0 dependancy imperative light weight http handler.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.esm.js"
+    },
+    "require": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.cjs.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "node test",
+    "build": "rollup -c",
+    "build:dev": "rollup -c --watch",
+    "generate-types": "tsc --project tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S2thend/express-http-client.git"
+  },
+  "keywords": [
+    "http",
+    "http-client",
+    "fetch",
+    "request",
+    "interceptor",
+    "middleware",
+    "xhr",
+    "ajax",
+    "api-client",
+    "rest-client",
+    "promise",
+    "async",
+    "axios-alternative",
+    "fetch-wrapper",
+    "request-handler",
+    "response-handler",
+    "http-pipeline",
+    "composable",
+    "extensible",
+    "lightweight",
+    "modular",
+    "chainable"
+  ],
+  "author": "borui cai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/S2thend/express-http-client/issues"
+  },
+  "homepage": "https://github.com/S2thend/express-http-client#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.40.2",
+    "rollup-plugin-gzip": "^4.0.1",
+    "typescript": "^5.8.3"
+  }
+}

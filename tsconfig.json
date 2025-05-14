@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "declaration": true,
+      "emitDeclarationOnly": true,
+      "outDir": "dist",
+      "declarationMap": true,
+      "module": "esnext",
+      "target": "es2020",
+      "moduleResolution": "node"
+    },
+    "include": ["index.js", "src/**/*.js"]
+  }
